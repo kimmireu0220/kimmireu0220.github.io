@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Bellman-Ford Algorithm"
+categories: "algorithm"
 ---
 
 - Code Example

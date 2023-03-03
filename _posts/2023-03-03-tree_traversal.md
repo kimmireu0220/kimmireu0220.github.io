@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Tree-Tranversal Algorithm"
+categories: "algorithm"
 ---
 
 - Code Example
