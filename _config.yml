@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "dark"
 
 # Site Settings
 locale: "en-US"
@@ -49,7 +49,7 @@ comments:
     category_id: # Shown during giscus setup at https://giscus.app
     discussion_term: # "pathname" (default), "url", "title", "og:title"
     reactions_enabled: # '1' for enabled (default), '0' for disabled
-    theme: # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    theme: "dark"
   staticman:
     branch: # "master"
     endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"
@@ -104,10 +104,10 @@ analytics:
 # Site Author
 author:
   name: "Mireu Kim"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: "https://avatars.githubusercontent.com/u/67996276?s=400&u=6983bbbbb901439e3467b5edbe7c6139890effd3&v=4"
   bio: "Student"
   location: "South Korea"
-  email:
+  email: samkmr0220@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
