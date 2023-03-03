@@ -17,22 +17,21 @@ minimal_mistakes_skin: "dark"
 # Site Settings
 locale: "en-US"
 title: "Programming blog"
-title_separator: "-"
-subtitle: # site tagline that appears below site title in masthead
+title_separator: "|"
+subtitle: "study with me"
 name: "Mireu Kim"
-description: "Programming Study"
+description: "Study Programming"
 url: "https://kimmireu0220.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo: "/assets/images/logo.avif"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs: true
 words_per_minute: 200
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
-  disqus:
-    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  provider: "disqus"
+  disqus: "study-note"
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -104,7 +103,7 @@ analytics:
 # Site Author
 author:
   name: "Mireu Kim"
-  avatar: "https://avatars.githubusercontent.com/u/67996276?s=400&u=6983bbbbb901439e3467b5edbe7c6139890effd3&v=4"
+  avatar: "/assets/images/profile.jpg"
   bio: "Student"
   location: "South Korea"
   email: samkmr0220@gmail.com
@@ -276,7 +275,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+      show_date: true
