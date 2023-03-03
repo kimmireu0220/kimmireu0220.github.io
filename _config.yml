@@ -97,8 +97,9 @@ social:
 # Analytics
 analytics:
   provider: "google-gtag"
-  tracking_id: "G-5RNT427DNY"
-  anonymize_ip: false
+  google:
+    tracking_id: "G-5RNT427DNY"
+    anonymize_ip: false
 
 # Site Author
 author:
