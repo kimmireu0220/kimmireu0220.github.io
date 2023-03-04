@@ -2,6 +2,7 @@
 layout: single
 title: "Bellman-Ford Algorithm"
 categories: "algorithm"
+tag: ["bellman-ford"]
 ---
 
 - Code Example

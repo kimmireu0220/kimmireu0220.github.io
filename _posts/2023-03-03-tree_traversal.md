@@ -2,6 +2,7 @@
 layout: single
 title: "Tree-Tranversal Algorithm"
 categories: "algorithm"
+tag: ["tree"]
 ---
 
 - Code Example
