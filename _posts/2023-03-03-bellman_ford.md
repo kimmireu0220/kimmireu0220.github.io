@@ -3,9 +3,10 @@ layout: single
 title: "Bellman-Ford Algorithm"
 categories: "algorithm"
 tag: ["bellman-ford"]
+toc: true
 ---
 
-- Code Example
+## Code Example
 
 ```python
 INF = int(1e9)

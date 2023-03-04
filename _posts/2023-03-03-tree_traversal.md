@@ -3,9 +3,10 @@ layout: single
 title: "Tree-Tranversal Algorithm"
 categories: "algorithm"
 tag: ["tree"]
+toc: true
 ---
 
-- Code Example
+## Code Example
 
 ```python
 class Node:
