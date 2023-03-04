@@ -4,6 +4,9 @@ title: "Tree-Tranversal Algorithm"
 categories: "algorithm"
 tag: ["tree"]
 toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
 ---
 
 ## Code Example

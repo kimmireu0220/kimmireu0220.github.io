@@ -4,6 +4,9 @@ title: "Bellman-Ford Algorithm"
 categories: "algorithm"
 tag: ["bellman-ford"]
 toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
 ---
 
 ## Code Example
