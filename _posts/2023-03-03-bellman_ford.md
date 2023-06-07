@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "벨만-포드 알고리즘"
-categories: "알고리즘_이론"
-tag: ["벨만-포드"]
+title: "Bellman-Ford Algorithm"
+categories: "Algorithm_Theory"
+tag: ["Bellman-Ford"]
 toc: true
 author_profile: false
 sidebar:

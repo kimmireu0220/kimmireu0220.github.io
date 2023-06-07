@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "트리 순회 알고리즘"
-categories: "알고리즘_이론"
-tag: ["트리"]
+title: "Tree Traversal Algorithm"
+categories: "Algorithm_Theory"
+tag: ["Tree"]
 toc: true
 author_profile: false
 sidebar:
