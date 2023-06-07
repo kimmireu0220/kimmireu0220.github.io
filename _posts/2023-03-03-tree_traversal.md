@@ -1,15 +1,15 @@
 ---
 layout: single
-title: "Tree-Tranversal Algorithm"
-categories: "algorithm"
-tag: ["tree"]
+title: "트리 순회 알고리즘"
+categories: "알고리즘"
+tag: ["트리"]
 toc: true
 author_profile: false
 sidebar:
   nav: "docs"
 ---
 
-## Code Example
+## 예제 코드
 
 ```python
 class Node:

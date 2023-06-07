@@ -1,15 +1,15 @@
 ---
 layout: single
-title: "Bellman-Ford Algorithm"
-categories: "algorithm"
-tag: ["bellman-ford"]
+title: "벨만-포드 알고리즘"
+categories: "알고리즘"
+tag: ["벨만-포드"]
 toc: true
 author_profile: false
 sidebar:
   nav: "docs"
 ---
 
-## Code Example
+## 예제 코드
 
 ```python
 INF = int(1e9)
