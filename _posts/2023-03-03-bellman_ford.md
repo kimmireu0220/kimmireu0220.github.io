@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Bellman-Ford Algorithm!!"
+title: "Bellman-Ford Algorithm"
 categories: "algorithm"
 tag: ["bellman-ford"]
 toc: true
