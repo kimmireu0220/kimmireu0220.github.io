@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "벨만-포드 알고리즘"
-categories: "알고리즘"
+categories: "알고리즘 이론"
 tag: ["벨만-포드"]
 toc: true
 author_profile: false

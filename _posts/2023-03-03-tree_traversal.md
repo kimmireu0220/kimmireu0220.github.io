@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "트리 순회 알고리즘"
-categories: "알고리즘"
+categories: "알고리즘 이론"
 tag: ["트리"]
 toc: true
 author_profile: false
