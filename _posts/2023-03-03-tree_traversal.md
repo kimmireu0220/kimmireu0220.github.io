@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Tree Traversal Algorithm"
-categories: "Algorithm_Theory"
+categories: "algorithm_theory"
 tag: ["Tree"]
 toc: true
 author_profile: false
