@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Bellman-Ford Algorithm"
+title: "벨만-포드 알고리즘"
 categories: "algorithm_theory"
 tag: ["Bellman-Ford"]
 toc: true
