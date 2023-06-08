@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Tree Traversal Algorithm"
+title: "트리 순회 알고리즘"
 categories: "algorithm_theory"
 tag: ["Tree"]
 toc: true
