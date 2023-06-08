@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Bellman-Ford Algorithm"
-categories: "Algorithm_Theory"
+categories: "algorithm_theory"
 tag: ["Bellman-Ford"]
 toc: true
 author_profile: false
