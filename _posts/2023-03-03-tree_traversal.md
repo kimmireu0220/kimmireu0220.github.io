@@ -3,7 +3,6 @@ layout: single
 title: "트리 순회 알고리즘"
 categories: "algorithm_theory"
 tag: ["Tree"]
-toc: true
 author_profile: false
 sidebar:
   nav: "docs"
