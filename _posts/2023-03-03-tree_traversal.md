@@ -5,7 +5,7 @@ categories: "algorithm_theory"
 tag: ["Tree"]
 author_profile: false
 sidebar:
-  nav: "docs"
+  nav: "counts"
 ---
 
 ## 예제 코드
