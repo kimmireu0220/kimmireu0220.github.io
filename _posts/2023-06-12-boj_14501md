@@ -1,0 +1,35 @@
+---
+layout: single
+title: "백준 14501번: 퇴사 (실버 3)"
+categories: "algorithm_exercise"
+tag: ["Implementation"]
+toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
+---
+
+## 문제
+
+[백준 14501번: 퇴사 (실버 3)](https://www.acmicpc.net/problem/14501)
+
+## 풀이 아이디어
+
+- 1 ~ n일차 상담을 하는 경우와 안하는 경우 중 받을 수 있는 금액이 더 큰 쪽을 dp 배열에 담기
+
+## 정답 코드
+
+```python
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+schedule = [list(map(int, input().split())) for _ in range(n)]
+dp = [0] * (n + 1)
+
+for i in range(n):
+    for j in range(i + schedule[i][0], n + 1):
+        dp[j] = max(dp[j], dp[i] + schedule[i][1])
+
+print(dp[n])
+```
