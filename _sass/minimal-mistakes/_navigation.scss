@@ -8,7 +8,6 @@
 
 .breadcrumbs {
   @include clearfix;
-  margin: 0 auto;
   max-width: 100%;
   padding-left: 1em;
   padding-right: 1em;
@@ -568,6 +567,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }
