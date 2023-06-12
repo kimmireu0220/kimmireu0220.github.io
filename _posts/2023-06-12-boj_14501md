@@ -2,7 +2,7 @@
 layout: single
 title: "백준 14501번: 퇴사 (실버 3)"
 categories: "algorithm_exercise"
-tag: ["Implementation"]
+tag: ["DP"]
 toc: true
 author_profile: false
 sidebar:
