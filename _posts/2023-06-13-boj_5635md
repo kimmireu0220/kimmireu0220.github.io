@@ -1,0 +1,35 @@
+---
+layout: single
+title: "백준 5635번: 생일 (실버 5)"
+categories: "algorithm_exercise"
+tag: ["String", "Implementaion"]
+author_profile: false
+sidebar:
+  nav: "counts"
+---
+
+## 문제
+
+[백준 5635번: 생일 (실버 5)](https://www.acmicpc.net/problem/5635)
+
+## 풀이 아이디어
+
+- 연도, 월, 일 오름차순 정렬
+
+## 정답 코드
+
+```python
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+lst = []
+
+for _ in range(n):
+    a, b, c, d = input().rstrip().split()
+    lst.append([a, int(b), int(c), int(d)])
+
+lst = sorted(lst, key=lambda x: (x[3], x[2], x[1]))
+print(lst[-1][0])
+print(lst[0][0])
+```
