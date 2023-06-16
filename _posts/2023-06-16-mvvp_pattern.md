@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "디자인 패턴 - MVVM 모듈 패턴"
-categories: "design_patterns"
-tag: ["mvvm_pattern"]
+categories: "computer_science"
+tag: ["design_patterns"]
 author_profile: false
 sidebar:
   nav: "counts"

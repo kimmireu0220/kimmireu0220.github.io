@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "디자인 패턴 - 옵저버 패턴"
-categories: "design_patterns"
-tag: ["observer_pattern"]
+categories: "computer_science"
+tag: ["design_patterns"]
 author_profile: false
 sidebar:
   nav: "counts"

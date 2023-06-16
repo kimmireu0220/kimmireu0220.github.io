@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "디자인 패턴 - 이터레이터 패턴"
-categories: "design_patterns"
-tag: ["iterator_pattern"]
+categories: "computer_science"
+tag: ["design_patterns"]
 author_profile: false
 sidebar:
   nav: "counts"
