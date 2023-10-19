@@ -11,37 +11,43 @@ sidebar:
 ## 예제 코드
 
 ```python
-class Node:
-    def __init__(self, parent, left, right):
-        self.parent = parent
-        self.left = left
-        self.right = right
+def pre_order(p):
+    if p == ".":
+        return
+    print(p, end="")
+    pre_order(l[p])
+    pre_order(r[p])
 
-def pre_order(node):
-    print(node.parent, end="")
-    if node.left != "None":
-        pre_order(tree[node.left])
-    if node.right != "None":
-        pre_order(tree[node.right])
 
-def in_order(node):
-    if node.left != "None":
-        in_order(tree[node.left])
-    print(node.parent, end="")
-    if node.right != "None":
-        in_order(tree[node.right])
+def in_order(p):
+    if p == ".":
+        return
+    in_order(l[p])
+    print(p, end="")
+    in_order(r[p])
 
-def post_order(node):
-    if node.left != "None":
-        post_order(tree[node.left])
-    if node.right != "None":
-        post_order(tree[node.right])
-    print(node.parent, end="")
+
+def post_order(p):
+    if p == ".":
+        return
+    post_order(l[p])
+    post_order(r[p])
+    print(p, end="")
+
 
 n = int(input())
-tree = {}
+l, r = {}, {}
 
-for i in range(n):
-    parent, left, right = input().split()
-    tree[parent] = Node(parent, left, right)
+for _ in range(n):
+    p, lc, rc = input().split()
+    l[p] = lc
+    r[p] = rc
+
+root = "A"
+pre_order(root)
+print()
+in_order(root)
+print()
+post_order(root)
+print()
 ```
