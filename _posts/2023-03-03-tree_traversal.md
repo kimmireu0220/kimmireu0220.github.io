@@ -11,6 +11,14 @@ sidebar:
 ## 예제 코드
 
 ```python
+
+def pre_order(p):
+    if p == ".":
+        return
+    print(p, end="")
+    pre_order(l[p])
+    pre_order(r[p])
+
 def pre_order(p):
     if p == ".":
         return
