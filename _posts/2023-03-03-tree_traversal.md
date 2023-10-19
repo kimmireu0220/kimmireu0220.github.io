@@ -50,5 +50,4 @@ in_order(root)
 print()
 post_order(root)
 print()
-
 ```
