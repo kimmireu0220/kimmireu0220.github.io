@@ -15,7 +15,7 @@ def rotate(board, degree):
     if degree == 90:
         return list(map(list, zip(*board[::-1])))
     elif degree == 180:
-        return rotate(1, rotate(1, board))
+        return rotate(rotate(1, board), 90)
     elif degree == 270:
         return list(map(list, zip(*board)))[::-1]
     else:

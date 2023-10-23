@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "(이진)트리 순회 알고리즘"
+title: "트리 순회 알고리즘"
 categories: "algorithm_theory"
 tag: ["Tree"]
 author_profile: false
