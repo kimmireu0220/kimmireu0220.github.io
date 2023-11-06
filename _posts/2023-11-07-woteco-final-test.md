@@ -8,8 +8,37 @@ sidebar:
   nav: "counts"
 ---
 
-## 예제 코드
+## Fork & Git Clone
 
-```javascript
-const test = "test";
-```
+## README.md 파악
+
+## npm install & npm test
+
+## docs/README.md 작성
+
+## 파일 구성
+
+📦**tests**
+┣ 📜app-domain.js
+┣ 📜specific-domain.js
+┣ 📜ViewTest.js
+┣ 📜ApplicationTest.js
+┗ 📜StringTest.js
+
+📦docs
+┗ 📜README.md
+
+📦src
+┣ 📂constants
+┃ ┣ 📜setting.js
+┃ ┗ 📜message.js
+┣ 📜(Program)Domain.js
+┣ 📜(Specific)Domain.js
+┃ 📜InputView.js
+┃ 📜OutputView.js
+┣ 📜App.js
+┗ 📜index.js
+
+## 구현
+
+## 과제 제출
