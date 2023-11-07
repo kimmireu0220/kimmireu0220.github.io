@@ -19,7 +19,7 @@ sidebar:
 ## 파일 구성
 
 📦**tests**
-┣ 📜app-domain.js
+┣ program-domain.js
 ┣ 📜specific-domain.js
 ┣ 📜ViewTest.js
 ┣ 📜ApplicationTest.js
@@ -29,16 +29,66 @@ sidebar:
 ┗ 📜README.md
 
 📦src
-┣ 📂constants
-┃ ┣ 📜setting.js
-┃ ┗ 📜message.js
 ┣ 📜(Program)Domain.js
 ┣ 📜(Specific)Domain.js
-┃ 📜InputView.js
-┃ 📜OutputView.js
+┃ 📜View.js
 ┣ 📜App.js
+┣ 📜setting.js
+┣ 📜message.js
 ┗ 📜index.js
 
 ## 구현
+
+```javascript
+// View.js
+class View {
+  async readLineAsnc() {
+    const input = await Console.readLineAsync();
+    validateUserInput(input);
+    return input;
+  }
+
+  async readIntegerAsnc() {
+    const input = await Console.readLineAsync();
+    validateInteger(input);
+    return input;
+  }
+
+  async print() {
+    Console.print();
+  }
+
+  validateUserInput(name) {
+    if (name.trim() === "") throw new Error();
+  }
+
+  validateInteger(number) {
+    if (Number.isInteger(Number(number))) throw new Error();
+  }
+}
+
+export default View;
+```
+
+```javascript
+// App.js
+class App {
+  #view;
+  #domain;
+
+  async play() {}
+}
+
+export default App;
+```
+
+```javascript
+// setting.js
+const SETTING = Object.freeze({
+  key: value,
+});
+
+export default SETTING;
+```
 
 ## 과제 제출
