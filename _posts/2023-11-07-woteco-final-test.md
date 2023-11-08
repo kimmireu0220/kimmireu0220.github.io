@@ -8,135 +8,84 @@ sidebar:
   nav: "counts"
 ---
 
-## Fork & Git Clone
+## 미션 시작
 
-## README.md 파악
-
-## npm install & npm test
+1. Fork
+2. git clone
+3. git checkout -b kimmireu0220
+4. README.md 파악
+5. npm install
+6. npm test
 
 ## docs/README.md 작성
 
+1. 🚀 기능 요구 사항
+2. 🛠️ 구조 설계
+3. ⚙️ 기능 구현 목록
+4. ✅ 최종 체크포인트
+
 ## 파일 구성
 
-📦**tests**
-
-┣ 📜program-domain-test.js
-
-┣ 📜specific-domain-test.js
-
-┣ 📜ViewTest.js
-
-┣ 📜ApplicationTest.js
-
-┗ 📜StringTest.js
-
-📦docs
-
-┗ 📜README.md
-
 📦src
-
-┣ 📜(Program)Domain.js
-
-┣ 📜(Specific)Domain.js
-
-┃ 📜View.js
-
-┃ 📜Controller.js
-
+┣ 📂constants
+┃ ┣ 📜error.js
+┃ ┣ 📜messages.js
+┃ ┗ 📜system.js
+┣ 📂controller
+┃ ┗ 📜Controller.js
+┣ 📂domain
+┃ ┗ 📜index.js
+┣ 📂exceptions
+┃ ┗ 📜ApplicationError.js
+┣ 📂service
+┃ ┗ 📜index.js
+┣ 📂utils
+┃ ┗ 📜validator.js
+┣ 📂view
+┃ ┣ 📜InputView.js
+┃ ┣ 📜OutputView.js
+┃ ┗ 📜index.js
 ┣ 📜App.js
-
-┣ 📜setting.js
-
-┣ 📜message.js
-
 ┗ 📜index.js
 
 ## 구현
 
 ```javascript
-// View.js
-class View {
-  async readLineAsnc() {
-    const input = await Console.readLineAsync(message);
-    this.#validateUserInput(input);
-    return input;
-  }
+import { InputView, OutputView } from "../view/index.js";
 
-  async readIntegerAsnc() {
-    const input = await Console.readLineAsync(message);
-    this.#validateInteger(input);
-    return input;
-  }
-
-  #validateUserInput(input) {
-    if (input.trim() === "") throw new Error();
-  }
-
-  #validateInteger(input) {
-    if (Number.isInteger(Number(input))) throw new Error();
-  }
-
-  printMessage() {
-    Console.print(message);
-  }
-
-export default View;
-```
-
-```javascript
-// Controller.js
 class Controller {
-  #view;
-  #domain;
+  /**
+   * 입출력을 담당하는 View입니다.
+   */
+  #view = {
+    input: InputView,
+    output: OutputView,
+  };
 
-  constructor({ view, domain }) {
-    this.#view = view;
-    this.#domain = domain;
+  /**
+   * 비즈니스 로직을 담당하는 Service입니다.
+   */
+  #service = {};
+
+  async start() {
+    await this.#handleError(async () => {});
   }
 
-  async start() {}
-
-  async #retryOnError(callback) {
+  /**
+   * 해당 콜백 함수 실행 중 에러가 발생할 시 함수를 다시 시작합니다.
+   * @param {Function} action 에러 핸들링 대상이 될 함수입니다.
+   */
+  async #handleError(action) {
     try {
-      return await callback();
+      await action();
     } catch ({ message }) {
-      this.#view.print(message);
-      return this.#retryOnError(callback);
+      this.#view.output.error(message);
+      await this.#handleError(action);
     }
   }
 }
 
-export default App;
-```
-
-```javascript
-// App.js
-class App {
-  #controller;
-
-  constructor() {
-    this.#controller = new Controller({
-      view: new View(),
-      domain: new Domain(),
-    });
-  }
-
-  async play() {
-    await this.#controller.start();
-  }
-}
-
-export default App;
-```
-
-```javascript
-// setting.js
-const SETTING = Object.freeze({
-  key: value,
-});
-
-export default SETTING;
+export default Controller;
 ```
 
 ## 과제 제출
