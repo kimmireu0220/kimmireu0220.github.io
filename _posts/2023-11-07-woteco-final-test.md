@@ -19,23 +19,37 @@ sidebar:
 ## 파일 구성
 
 📦**tests**
+
 ┣ 📜program-domain-test.js
+
 ┣ 📜specific-domain-test.js
+
 ┣ 📜ViewTest.js
+
 ┣ 📜ApplicationTest.js
+
 ┗ 📜StringTest.js
 
 📦docs
+
 ┗ 📜README.md
 
 📦src
+
 ┣ 📜(Program)Domain.js
+
 ┣ 📜(Specific)Domain.js
+
 ┃ 📜View.js
+
 ┃ 📜Controller.js
+
 ┣ 📜App.js
+
 ┣ 📜setting.js
+
 ┣ 📜message.js
+
 ┗ 📜index.js
 
 ## 구현
@@ -45,13 +59,13 @@ sidebar:
 class View {
   async readLineAsnc(message) {
     const input = await Console.readLineAsync(message);
-    this.validateUserInput(input);
+    this.#validateUserInput(input);
     return input;
   }
 
   async readIntegerAsnc(message) {
     const input = await Console.readLineAsync(message);
-    this.validateInteger(input);
+    this.#validateInteger(input);
     return input;
   }
 
@@ -59,11 +73,11 @@ class View {
     Console.print(message);
   }
 
-  validateUserInput(name) {
+  #validateUserInput(name) {
     if (name.trim() === "") throw new Error();
   }
 
-  validateInteger(number) {
+  #validateInteger(number) {
     if (Number.isInteger(Number(number))) throw new Error();
   }
 }
