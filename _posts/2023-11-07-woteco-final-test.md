@@ -19,7 +19,7 @@ sidebar:
 ## 파일 구성
 
 📦**tests**
-┣ program-domain.js
+┣ 📜program-domain.js
 ┣ 📜specific-domain.js
 ┣ 📜ViewTest.js
 ┣ 📜ApplicationTest.js
@@ -32,6 +32,7 @@ sidebar:
 ┣ 📜(Program)Domain.js
 ┣ 📜(Specific)Domain.js
 ┃ 📜View.js
+┃ 📜Controller.js
 ┣ 📜App.js
 ┣ 📜setting.js
 ┣ 📜message.js
@@ -44,13 +45,13 @@ sidebar:
 class View {
   async readLineAsnc() {
     const input = await Console.readLineAsync();
-    validateUserInput(input);
+    this.validateUserInput(input);
     return input;
   }
 
   async readIntegerAsnc() {
     const input = await Console.readLineAsync();
-    validateInteger(input);
+    this.validateInteger(input);
     return input;
   }
 
@@ -71,12 +72,41 @@ export default View;
 ```
 
 ```javascript
-// App.js
-class App {
+// Controller.js
+class Controller {
   #view;
   #domain;
 
-  async play() {}
+  async #retryOnError(callback) {
+    try {
+      return await callback();
+    } catch ({ message }) {
+      this.#view.print(message);
+      return this.#retryOnError(callback);
+    }
+  }
+
+  async start() {}
+}
+
+export default App;
+```
+
+```javascript
+// App.js
+class App {
+  #controller;
+
+  constructor() {
+    this.#controller = new Controller({
+      view: new View(),
+      domain: new Domain(),
+    });
+  }
+
+  async play() {
+    await this.#controller.start();
+  }
 }
 
 export default App;
