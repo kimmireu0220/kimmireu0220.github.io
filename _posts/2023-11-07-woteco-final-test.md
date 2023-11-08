@@ -27,25 +27,45 @@ sidebar:
 ## 파일 구성
 
 📦src
+
 ┣ 📂constants
+
 ┃ ┣ 📜error.js
+
 ┃ ┣ 📜messages.js
+
 ┃ ┗ 📜system.js
+
 ┣ 📂controller
+
 ┃ ┗ 📜Controller.js
+
 ┣ 📂domain
+
 ┃ ┗ 📜index.js
+
 ┣ 📂exceptions
+
 ┃ ┗ 📜ApplicationError.js
+
 ┣ 📂service
+
 ┃ ┗ 📜index.js
+
 ┣ 📂utils
+
 ┃ ┗ 📜validator.js
+
 ┣ 📂view
+
 ┃ ┣ 📜InputView.js
+
 ┃ ┣ 📜OutputView.js
+
 ┃ ┗ 📜index.js
+
 ┣ 📜App.js
+
 ┗ 📜index.js
 
 ## 구현
