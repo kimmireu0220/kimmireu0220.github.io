@@ -19,8 +19,8 @@ sidebar:
 ## 파일 구성
 
 📦**tests**
-┣ 📜program-domain.js
-┣ 📜specific-domain.js
+┣ 📜program-domain-test.js
+┣ 📜specific-domain-test.js
 ┣ 📜ViewTest.js
 ┣ 📜ApplicationTest.js
 ┗ 📜StringTest.js
@@ -43,20 +43,20 @@ sidebar:
 ```javascript
 // View.js
 class View {
-  async readLineAsnc() {
-    const input = await Console.readLineAsync();
+  async readLineAsnc(message) {
+    const input = await Console.readLineAsync(message);
     this.validateUserInput(input);
     return input;
   }
 
-  async readIntegerAsnc() {
-    const input = await Console.readLineAsync();
+  async readIntegerAsnc(message) {
+    const input = await Console.readLineAsync(message);
     this.validateInteger(input);
     return input;
   }
 
-  async print() {
-    Console.print();
+  async print(message) {
+    Console.print(message);
   }
 
   validateUserInput(name) {
@@ -77,6 +77,13 @@ class Controller {
   #view;
   #domain;
 
+  constructor({ view, domain }) {
+    this.#view = view;
+    this.#domain = domain;
+  }
+
+  async start() {}
+
   async #retryOnError(callback) {
     try {
       return await callback();
@@ -85,8 +92,6 @@ class Controller {
       return this.#retryOnError(callback);
     }
   }
-
-  async start() {}
 }
 
 export default App;
