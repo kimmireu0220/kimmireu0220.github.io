@@ -57,30 +57,29 @@ sidebar:
 ```javascript
 // View.js
 class View {
-  async readLineAsnc(message) {
+  async readLineAsnc() {
     const input = await Console.readLineAsync(message);
     this.#validateUserInput(input);
     return input;
   }
 
-  async readIntegerAsnc(message) {
+  async readIntegerAsnc() {
     const input = await Console.readLineAsync(message);
     this.#validateInteger(input);
     return input;
   }
 
-  async print(message) {
+  #validateUserInput(input) {
+    if (input.trim() === "") throw new Error();
+  }
+
+  #validateInteger(input) {
+    if (Number.isInteger(Number(input))) throw new Error();
+  }
+
+  printMessage() {
     Console.print(message);
   }
-
-  #validateUserInput(name) {
-    if (name.trim() === "") throw new Error();
-  }
-
-  #validateInteger(number) {
-    if (Number.isInteger(Number(number))) throw new Error();
-  }
-}
 
 export default View;
 ```
